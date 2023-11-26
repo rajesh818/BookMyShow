@@ -1,13 +1,20 @@
-package basic
+package handlers
 
 import (
 	"encoding/json"
 	"net/http"
+	"gorm.io/gorm"
 )
 
 type BasicData struct {
 	Name string `json:"name"`
 	Job  string `json:"job"`
+}
+
+var DB *gorm.DB;
+
+func SetDatabase(database *gorm.DB){
+	DB = database
 }
 
 func BasicHandler(w http.ResponseWriter, r *http.Request) {

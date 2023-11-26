@@ -1,4 +1,4 @@
-package basic
+package routes
 
 import (
 	"fmt"
@@ -10,5 +10,5 @@ import (
 
 func BasicRoutes(r *mux.Router) {
 	fmt.Println("Reached Router");
-	r.HandleFunc("/", basic.BasicHandler).Methods(http.MethodGet)
+	r.HandleFunc("/", handlers.BasicHandler).Methods(http.MethodGet)
 }
