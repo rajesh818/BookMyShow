@@ -8,4 +8,5 @@ import (
 func RegisterRoutes(r *mux.Router) {
 	fmt.Println("Registering Routes")
 	BasicRoutes(r);
+	UserRoutes(r)
 }
