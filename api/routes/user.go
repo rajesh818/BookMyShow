@@ -11,4 +11,5 @@ import (
 func UserRoutes(r *mux.Router) {
 	log.Println("UserRoutes")
 	r.HandleFunc("/get/{id}", handlers.GetUserById).Methods(http.MethodGet)
+	r.HandleFunc("/create", handlers.CreateUser).Methods(http.MethodPost)
 }

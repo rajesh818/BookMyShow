@@ -1,21 +1,19 @@
 package models
 
 import (
-	"gorm.io/gorm"
+
+    "gorm.io/gorm"
 )
 
 type User struct {
     gorm.Model
-	Id uint `gorm:"primaryKey"`
-    Name string `gorm:"column:name"`
-    Email string `gorm:"column:email"`
-    Mobile uint `gorm:"column:mobile"`
-    Password string `gorm:"column:password"`
-    CreatedAt uint `gorm:"column:created_at"`
-    UpdatedAt uint `gorm:"column:updated_at"`
-    DeletedAt uint `gorm:"column:deleted_at"`
+    Name      string         `gorm:"type:varchar(255)"`
+    Email     string         `gorm:"type:varchar(255)"`
+    Mobile    string         `gorm:"type:varchar(255)"`
+    Password  string         `gorm:"type:varchar(255)"`
 }
 
+// TableName sets the table name for the User model.
 func (User) TableName() string {
     return "user"
 }
