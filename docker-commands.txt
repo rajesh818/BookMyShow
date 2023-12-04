@@ -1,1 +1,8 @@
-docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_USER=rajesh818 -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=dream -p 3306:3306 -d mysql:latest
+docker run --name my-mysql \
+-e MYSQL_ROOT_PASSWORD=password \
+-e MYSQL_USER=rajesh818 \
+-e MYSQL_PASSWORD=password \
+-e MYSQL_DATABASE=dream \
+-p 3306:3306 \
+-v /Users/amreddy/Documents/Data-BookMyShow:/var/lib/mysql \
+-d mysql:latest
