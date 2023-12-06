@@ -10,5 +10,8 @@ func RegisterRoutes(r *mux.Router) {
 
 	userRoutes := r.PathPrefix("/user").Subrouter()
 	UserRoutes(userRoutes)
+
+	locationRoutes := r.PathPrefix("/location").Subrouter()
+	LocationRoutes(locationRoutes)
 	
 }
